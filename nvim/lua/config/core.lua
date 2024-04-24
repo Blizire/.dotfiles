@@ -1,5 +1,17 @@
 -- core.lua - hold the basic nvim key bindings and configuration here
 
+-- set shell to posh on windows or use default for others
+
+--[[ 
+-- will figure this out later for the LUA version of this solution.
+-- https://www.reddit.com/r/neovim/comments/vpnhrl/how_do_i_make_neovim_use_powershell_for_external/
+--
+if (vim.loop.os_uname().sysname == "Windows_NT") then
+    vim.opt.shell = 'powershell.exe'
+    print('windows!!!')
+end
+]]--
+
 vim.opt.mouse = 'a'
 vim.g.mapleader = " "
 vim.opt.termguicolors = true
